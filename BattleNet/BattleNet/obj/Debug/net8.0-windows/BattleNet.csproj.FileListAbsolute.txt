@@ -90,3 +90,9 @@ C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Deb
 C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\ref\BattleNet.dll
 C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\CustomTitleBar.g.cs
 C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\CustomTitleBar.baml
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\US_AllGames.g.cs
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\US_AllGames.baml
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\PanelManager.g.cs
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\PanelManager.baml
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\ShopPanel.g.cs
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\ShopPanel.baml

@@ -19,6 +19,12 @@
     <Compile Update="View\CustomTitleBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PanelManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ShopPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -34,6 +40,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\CustomTitleBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PanelManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ShopPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
