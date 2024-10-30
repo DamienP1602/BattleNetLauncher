@@ -1,0 +1,85 @@
+﻿using BattleNet.Utils;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+
+namespace BattleNet
+{
+    public class MyGamesSectionViewModel
+    {
+        private bool isMyGamesChecked;
+        private bool isInstalledChecked;
+        private bool isFavoriteChecked;
+
+        public bool IsMyGamesChecked
+        {
+            get => isMyGamesChecked;
+            set
+            {
+                if (isMyGamesChecked != value)
+                {
+                    isMyGamesChecked = value;
+                    OnPropertyChanged(nameof(IsMyGamesChecked));
+                    if (value) UncheckOthers(nameof(IsMyGamesChecked));
+                }
+            }
+        }
+
+        public bool IsInstalledChecked
+        {
+            get => isInstalledChecked;
+            set
+            {
+                if (isInstalledChecked != value)
+                {
+                    isInstalledChecked = value;
+                    OnPropertyChanged(nameof(IsInstalledChecked));
+                    if (value) UncheckOthers(nameof(IsInstalledChecked));
+                }
+            }
+        }
+
+        public bool IsFavoriteChecked
+        {
+            get => isFavoriteChecked;
+            set
+            {
+                if (isFavoriteChecked != value)
+                {
+                    isFavoriteChecked = value;
+                    OnPropertyChanged(nameof(IsFavoriteChecked));
+                    if (value) UncheckOthers(nameof(IsFavoriteChecked));
+                }
+            }
+        }
+
+        private void UncheckOthers(string checkedButton)
+        {
+            if (checkedButton != nameof(IsMyGamesChecked)) IsMyGamesChecked = false;
+            if (checkedButton != nameof(IsInstalledChecked)) IsInstalledChecked = false;
+            if (checkedButton != nameof(IsFavoriteChecked)) IsFavoriteChecked = false;
+        }
+
+        public ICommand MyGamesCommand { get; }
+        public ICommand InstalledCommand { get; }
+        public ICommand FavoriteCommand { get; }
+
+        public MyGamesSectionViewModel()
+        {
+            MyGamesCommand = new RelayCommand(param => IsMyGamesChecked = true);
+            InstalledCommand = new RelayCommand(param => IsInstalledChecked = true);
+            FavoriteCommand = new RelayCommand(param => IsFavoriteChecked = true);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}
