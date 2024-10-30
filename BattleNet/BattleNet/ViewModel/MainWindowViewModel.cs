@@ -1,5 +1,6 @@
 ﻿using BattleNet.Model;
 using BattleNet.Utils;
+using BattleNet.View;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -8,9 +9,9 @@ namespace BattleNet.ViewModel
 {
     public class MainWindowViewModel : Utils.ViewBase
     {
-        Dictionary<string, List<Grid>> allGrids = new Dictionary<string, List<Grid>>();
-
         public RelayCommand SwitchCommand => new RelayCommand(Switch);
+        public RelayCommand HomeCommand => new RelayCommand(HomeDraw);
+        public RelayCommand GameCommand => new RelayCommand(GameDraw);
         public RelayCommand ToggleVisibilityCommand => new RelayCommand(ToggleVisibility);
 
         ObservableCollection<Game> displayedGames = new ObservableCollection<Game>();
@@ -28,13 +29,8 @@ namespace BattleNet.ViewModel
             }
         }
 
-        public MainWindowViewModel(List<Grid> _home, List<Grid> _shop, List<Grid> _games)
+        public MainWindowViewModel()
         {
-            allGrids["Home"] = _home;
-            allGrids["Shop"] = _shop;
-            allGrids["Games"] = _games;
-
-
             GameManager.games = new ObservableCollection<Game>()
             {
                 new Game("Bo6","/Utils/Bo6Icon.png","/Utils/BO6BG.png", "/Utils/BO6Logo.png", "Action Shooter"),
@@ -48,26 +44,43 @@ namespace BattleNet.ViewModel
 
         void Switch(object? _sender)
         {
-            TextBlock _textBlox = (TextBlock)_sender;
-            string _name = _textBlox.Text;
+            //TextBlock _textBlox = (TextBlock)_sender;
+            //string _name = _textBlox.Text;
 
-            foreach (string key in allGrids.Keys)
-            {
-                if (key == _name)
-                {
-                    foreach (Grid grid in allGrids[key])
-                    {
-                        grid.Visibility = Visibility.Visible;
-                    }
-                }
-                else
-                {
-                    foreach (Grid grid in allGrids[key])
-                    {
-                        grid.Visibility = Visibility.Hidden;
-                    }
-                }
-            }
+            //foreach (string key in allGrids.Keys)
+            //{
+            //    if (key == _name)
+            //    {
+            //        foreach (Grid grid in allGrids[key])
+            //        {
+            //            grid.Visibility = Visibility.Visible;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        foreach (Grid grid in allGrids[key])
+            //        {
+            //            grid.Visibility = Visibility.Hidden;
+            //        }
+            //    }
+            //}
+        }
+
+        void HomeDraw(object _obj)
+        {
+            PanelManager? _panel = _obj as PanelManager;
+
+            if (_panel == null)
+                return;
+
+            _panel.GameContent.Visibility = Visibility.Visible;
+            _panel.ShopPanel.Visibility = Visibility.Hidden;
+            _panel.AllGames.Visibility = Visibility.Hidden;
+        }
+
+        void GameDraw(object _obj)
+        {
+
         }
 
 

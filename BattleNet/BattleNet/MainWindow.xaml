@@ -8,7 +8,6 @@
         xmlns:View="clr-namespace:BattleNet.View" x:Class="BattleNet.MainWindow"
         mc:Ignorable="d"
         WindowStyle="None"
-        BorderBrush="Black"
         WindowStartupLocation="CenterScreen"
         Title="Battle.net" Height="720" Width="1200" Icon="/LogoLauncher.png" Name="HomeWindow">
 
@@ -62,29 +61,24 @@
 
             <Grid Grid.Row="0">
 
-                <Button Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="Transparent" BorderThickness="0">
+                <Button Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="Transparent" BorderThickness="0"
+                         Command="{Binding HomeCommand}" CommandParameter="{x:Reference Name=PanelManager}">
                     <Image VerticalAlignment="Top" HorizontalAlignment="Left" Source="/BTIcon.png"/>
                 </Button>
 
                 <Button Height="30" Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,20,0,0"
                         Background="Transparent" BorderBrush="{x:Null}" Content="﹀" Foreground="White" Command="{Binding ToggleVisibilityCommand}" CommandParameter="{x:Reference Name=OptionMenu}"/>
 
-                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="75,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Home}" BorderThickness="0">
-                    <TextBlock Text="Home" Height="35" Width="100" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Home"/>
-                </Button>
-                <Button Height="35" Width="80" HorizontalAlignment="Left" Margin="155,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Games}" BorderThickness="0">
+                <Button Height="35" Width="80" HorizontalAlignment="Left" Margin="100,0,0,0" Background="Transparent" Command="{Binding GameCommand}" CommandParameter="{x:Reference Name=PanelManager}" BorderThickness="0">
                     <TextBlock Text="Games" Height="35" Width="80" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Games"/>
                 </Button>
-                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="245,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Shop}" BorderThickness="0">
+                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="200,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Shop}" BorderThickness="0">
                     <TextBlock Text="Shop" Height="35" Width="60" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Shop"/>
                 </Button>
             </Grid>
 
-            <Grid x:Name="HomeContent" Grid.Row="2">
-                <custom:GameContent x:Name="GameContent" HorizontalAlignment="Center"/>
-            </Grid>
-
-            <Grid x:Name="ShopContent" Grid.Row="2"/>
+            <View:PanelManager x:Name="PanelManager" Grid.Row="2"></View:PanelManager>
+            
         </Grid>
 
         <Grid Grid.Column="1" Background="#15171E" Margin="0,20,0,0">

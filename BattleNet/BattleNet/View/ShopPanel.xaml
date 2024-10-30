@@ -10,8 +10,8 @@
         <Grid x:Name="GamesContent" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="5">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                    <Button Content="Show All Games" Margin="5" Click="DisplayAll" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
-                    <Button Content="Show Favorite Games" Margin="5" Click="DisplayFav" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
+                    <Button Content="Show All Games" Margin="5" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
+                    <Button Content="Show Favorite Games" Margin="5" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
                 </StackPanel>
 
             </StackPanel>

@@ -12,5 +12,7 @@
 
         <BattleNet:US_AllGames x:Name="AllGames" Visibility="Hidden"></BattleNet:US_AllGames>
 
+        <local:ShopPanel x:Name="ShopPanel" Visibility="Hidden"></local:ShopPanel>
+
     </Grid>
 </UserControl>

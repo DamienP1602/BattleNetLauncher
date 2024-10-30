@@ -23,23 +23,8 @@ namespace BattleNet
         public MainWindow()
         {
             InitializeComponent();
-            List<Grid> _home = new List<Grid> { HomeContent };
-            List<Grid> _shop = new List<Grid> { ShopContent };
-            List<Grid> _games = new List<Grid> { GamesContent };
-            mainWindow = new MainWindowViewModel(_home, _shop, _games);
+            mainWindow = new MainWindowViewModel();
             DataContext = mainWindow;
-            mainWindow.DisplayedGames = FavoritesGame.AllGames;
         }
-
-        private void DisplayAll(object sender, RoutedEventArgs e)
-        {
-            mainWindow.DisplayedGames = FavoritesGame.AllGames;
-        }
-
-        private void DisplayFav(object sender, RoutedEventArgs e)
-        {
-            mainWindow.DisplayedGames = FavoritesGame.FavoriteGames;
-        }
-
     }
 }
