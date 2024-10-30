@@ -10,12 +10,12 @@
         <Grid x:Name="GamesContent" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="5">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                    <Button Content="Show All Games" Margin="5" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
-                    <Button Content="Show Favorite Games" Margin="5" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
+                    <Button Content="Show All Games" Margin="5" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White" Command="{Binding ShowAllGamesCommand}"/>
+                    <Button Content="Show Favorite Games" Margin="5" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White" Command="{Binding ShowFavoriteCommand}"/>
                 </StackPanel>
 
             </StackPanel>
-            <ListBox x:Name="GamesListBox" ItemsSource="{Binding DisplayedGames, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="510" Width="700" Margin="160,0,0,0" Background="Transparent">
+            <ListBox x:Name="GamesListBox" ItemsSource="{Binding DisplayedGames, UpdateSourceTrigger=PropertyChanged}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="510" Width="800" Margin="160,0,0,0" Background="Transparent">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />

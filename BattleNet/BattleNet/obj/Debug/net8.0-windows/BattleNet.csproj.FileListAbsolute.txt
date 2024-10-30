@@ -134,3 +134,5 @@ D:\Julio\Github\WPF\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windo
 D:\Julio\Github\WPF\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\BattleNet.pdb
 D:\Julio\Github\WPF\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\BattleNet.genruntimeconfig.cache
 D:\Julio\Github\WPF\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\ref\BattleNet.dll
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\ConnexionWindow.g.cs
+C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\View\ConnexionWindow.baml

@@ -43,7 +43,6 @@ namespace BattleNet.ViewModel
             if (!Favorites.Contains(selectedGame))
             {
                 Favorites.Add((selectedGame));
-                MessageBox.Show(SelectedGame.Name);
             }
         }
     }
