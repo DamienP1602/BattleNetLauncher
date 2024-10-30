@@ -40,5 +40,6 @@ namespace BattleNet
         {
             mainWindow.DisplayedGames = FavoritesGame.FavoriteGames;
         }
+
     }
 }

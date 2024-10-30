@@ -73,7 +73,19 @@
                         <TextBlock Text="{Binding AllFriendListText}"></TextBlock><!--TODO Rendre dynamique le 0/0-->
                     </StackPanel>
                 </Button>
-                <ListBox x:Name="listAllContact" Visibility="Hidden" ItemsSource="{Binding AllContacts}"></ListBox>
+                
+                <ListBox x:Name="listAllContact" Visibility="Hidden" ItemsSource="{Binding AllContacts}">
+                    <!--<ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="{Binding PseudoBattleTag}"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>-->
+                </ListBox>
             </StackPanel>
 
             <!--</StackPanel>-->

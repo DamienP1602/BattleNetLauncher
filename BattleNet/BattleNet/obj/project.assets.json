@@ -8,24 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\MART2812\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\PUEC1602\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MART2812\\Documents\\GitHub\\BattleNet\\BattleNet\\BattleNet\\BattleNet.csproj",
+      "projectUniqueName": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj",
       "projectName": "BattleNet",
-      "projectPath": "C:\\Users\\MART2812\\Documents\\GitHub\\BattleNet\\BattleNet\\BattleNet\\BattleNet.csproj",
-      "packagesPath": "C:\\Users\\MART2812\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MART2812\\Documents\\GitHub\\BattleNet\\BattleNet\\BattleNet\\obj\\",
+      "projectPath": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj",
+      "packagesPath": "C:\\Users\\PUEC1602\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\MART2812\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\PUEC1602\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
