@@ -73,7 +73,7 @@
                 <Button Height="35" Width="80" HorizontalAlignment="Left" Margin="100,0,0,0" Background="Transparent" Command="{Binding GameCommand}" CommandParameter="{x:Reference Name=PanelManager}" BorderThickness="0">
                     <TextBlock Text="Games" Height="35" Width="80" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Games"/>
                 </Button>
-                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="200,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Shop}" BorderThickness="0">
+                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="200,0,0,0" Background="Transparent" Command="{Binding ShopCommand}" CommandParameter="{x:Reference Name=PanelManager}" BorderThickness="0">
                     <TextBlock Text="Shop" Height="35" Width="60" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Shop"/>
                 </Button>
             </Grid>
@@ -83,7 +83,7 @@
         </Grid>
 
         <Grid Grid.Column="1" Background="#15171E" Margin="0,20,0,0">
-            <custom:US_ContactList VerticalAlignment="Top" Margin="0,20,0,0"/>
+            <custom:US_ContactList x:Name="ContactList" VerticalAlignment="Top" Margin="0,20,0,0"/>
         </Grid>
 
 

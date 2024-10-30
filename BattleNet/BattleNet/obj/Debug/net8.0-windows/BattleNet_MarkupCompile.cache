@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\App.xaml
-91533171962
+10964985746
 
-28358495817
+30-80489441
 1981385397204
-AddContactWindow.xaml;MainWindow.xaml;US_AllGames.xaml;Utils\Favorite.xaml;Utils\GameContent.xaml;Utils\US_ContactList.xaml;View\CustomTitleBar.xaml;View\PanelManager.xaml;View\ShopPanel.xaml;
+AddContactWindow.xaml;MainWindow.xaml;US_AllGames.xaml;Utils\Favorite.xaml;Utils\GameContent.xaml;Utils\US_ContactList.xaml;View\ConnexionWindow.xaml;View\CustomTitleBar.xaml;View\PanelManager.xaml;View\ShopPanel.xaml;
 
 False
 
