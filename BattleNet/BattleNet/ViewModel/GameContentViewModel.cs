@@ -68,7 +68,7 @@ namespace BattleNet.ViewModel
 
         void OpenLink()
         {
-            Process.Start(new ProcessStartInfo(CurrentGame.Link) { UseShellExecute = true });
+            //Process.Start(new ProcessStartInfo(CurrentGame.Link) { UseShellExecute = true });
         }
         
     }

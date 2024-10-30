@@ -8,13 +8,13 @@
         xmlns:View="clr-namespace:BattleNet.View" x:Class="BattleNet.MainWindow"
         mc:Ignorable="d"
         WindowStyle="None"
-        BorderBrush="Black"
+        WindowStartupLocation="CenterScreen"
         Title="Battle.net" Height="720" Width="1200" Icon="/LogoLauncher.png" Name="HomeWindow">
 
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
@@ -42,62 +42,43 @@
                 <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
 
-
-            <custom:Favorite x:Name="FavoritesGame" Grid.Row="1" Grid.Column="0" Margin="10,0,10,15"/>
+            <StackPanel Grid.Row="1" Margin="10,0,10,15" Orientation="Horizontal">
+                <StackPanel Grid.Row="1" Margin="10,25,10,15" VerticalAlignment="Top">
+                    <Border BorderThickness="0" Background="#2f2f37">
+                        <StackPanel>
+                            <Button Width="200" Height="50" Background="#2f2f37" BorderThickness="0" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Width="24" Height="24" Margin="0,0,15,0" Source="/grid_icon.png"/>
+                                    <TextBlock Text="All Games" FontSize="16" Foreground="#fbfbfb"/>
+                                </StackPanel>
+                            </Button>
+                            <Rectangle Height="4" Fill="#FF03467B" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <custom:Favorite x:Name="FavoritesGame" Grid.Row="1" Grid.Column="0" Margin="10,0,10,15" Width="700"></custom:Favorite>
+            </StackPanel>
 
             <Grid Grid.Row="0">
 
-                <Button Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="Transparent" BorderThickness="0">
+                <Button Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="Transparent" BorderThickness="0"
+                         Command="{Binding HomeCommand}" CommandParameter="{x:Reference Name=PanelManager}">
                     <Image VerticalAlignment="Top" HorizontalAlignment="Left" Source="/BTIcon.png"/>
                 </Button>
 
                 <Button Height="30" Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,20,0,0"
                         Background="Transparent" BorderBrush="{x:Null}" Content="﹀" Foreground="White" Command="{Binding ToggleVisibilityCommand}" CommandParameter="{x:Reference Name=OptionMenu}"/>
 
-                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="75,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Home}" BorderThickness="0">
-                    <TextBlock Text="Home" Height="35" Width="100" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Home"/>
-                </Button>
-                <Button Height="35" Width="80" HorizontalAlignment="Left" Margin="155,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Games}" BorderThickness="0">
+                <Button Height="35" Width="80" HorizontalAlignment="Left" Margin="100,0,0,0" Background="Transparent" Command="{Binding GameCommand}" CommandParameter="{x:Reference Name=PanelManager}" BorderThickness="0">
                     <TextBlock Text="Games" Height="35" Width="80" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Games"/>
                 </Button>
-                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="245,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Shop}" BorderThickness="0">
+                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="200,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Shop}" BorderThickness="0">
                     <TextBlock Text="Shop" Height="35" Width="60" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Shop"/>
                 </Button>
             </Grid>
 
-            <Grid x:Name="HomeContent" Grid.Row="2">
-                <custom:GameContent x:Name="GameContent" HorizontalAlignment="Center"/>
-            </Grid>
-
-            <Grid x:Name="GamesContent" Grid.Row="2" Visibility="Hidden">
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                        <Button Content="Show All Games" Margin="5" Click="DisplayAll" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
-                        <Button Content="Show Favorite Games" Margin="5" Click="DisplayFav" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
-                    </StackPanel>
-
-                </StackPanel>
-                <ListBox x:Name="GamesListBox" ItemsSource="{Binding DisplayedGames, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="510" Width="700" Margin="160,0,0,0" Background="Transparent">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel HorizontalAlignment="Center">
-                                <Border BorderBrush="#101216" BorderThickness="5" Margin="5" Padding="5" Background="#101216">
-                                    <Image Width="100" Height="100" Source="{Binding IconPath}" />
-                                </Border>
-                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Margin="5" Foreground="White" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </Grid>
-
-            <Grid x:Name="ShopContent" Grid.Row="2"/>
+            <View:PanelManager x:Name="PanelManager" Grid.Row="2"></View:PanelManager>
+            
         </Grid>
 
         <Grid Grid.Column="1" Background="#15171E" Margin="0,20,0,0">
