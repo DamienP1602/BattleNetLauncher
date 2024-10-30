@@ -84,10 +84,12 @@
             <Grid x:Name="HomeContent" Grid.Row="2">
 
                 <StackPanel Orientation="Horizontal">
-                <local:US_AllGames/>
+                    <StackPanel Orientation="Vertical">
+                    <local:US_AllGames/>
+                        
+                    </StackPanel>
 
-
-                <custom:GameContent x:Name="GameContent" HorizontalAlignment="Center"></custom:GameContent>
+                    <custom:GameContent x:Name="GameContent" HorizontalAlignment="Center"></custom:GameContent>
                 </StackPanel>
             </Grid>
 
