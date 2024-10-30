@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BattleNet.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +25,8 @@ namespace BattleNet
         public US_AllGames()
         {
             InitializeComponent();
-            DataContext = new AllGamesViewModel(); 
+            AllGamesViewModel allGamesViewModel = new AllGamesViewModel();
+            DataContext = allGamesViewModel;
         }
     }
 

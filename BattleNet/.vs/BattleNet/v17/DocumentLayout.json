@@ -1,38 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\",
+  "WorkspaceRootPath": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\allgamesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\allgamesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\us_allgames.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\us_allgames.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\us_allgames.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\view\\shoppanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\view\\shoppanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\us_allgames.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\us_allgames.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\view\\panelmanager.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\view\\panelmanager.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\utils\\gamecontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\utils\\gamecontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MOUL3107\\AppData\\Local\\SourceServer\\cd38b92270ec040409a4249060012d14af32b8e54710f26cc5e41d6f675433ff\\BattleNet\\BattleNet\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\viewmodel\\gamecontentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\viewmodel\\gamecontentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\viewmodel\\gamecontentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|c:\\users\\puec1602\\documents\\github\\battlenetlauncher\\battlenet\\battlenet\\viewmodel\\panelmanagerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\viewmodel\\panelmanagerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\view\\panelmanager.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\view\\panelmanager.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|d:\\julio\\github\\wpf\\battlenetlauncher\\battlenet\\battlenet\\utils\\gamecontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5C9758F6-7076-4D2A-BFCA-30F463FC9DF0}|BattleNet\\BattleNet.csproj|solutionrelative:battlenet\\utils\\gamecontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,15 +49,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\GameManager.cs",
+              "RelativeDocumentMoniker": "BattleNet\\GameManager.cs",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\GameManager.cs",
+              "RelativeToolTip": "BattleNet\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T15:35:49.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\MOUL3107\\AppData\\Local\\SourceServer\\cd38b92270ec040409a4249060012d14af32b8e54710f26cc5e41d6f675433ff\\BattleNet\\BattleNet\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\MOUL3107\\AppData\\Local\\SourceServer\\cd38b92270ec040409a4249060012d14af32b8e54710f26cc5e41d6f675433ff\\BattleNet\\BattleNet\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAmwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T14:32:45.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "US_AllGames.xaml.cs",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\US_AllGames.xaml.cs",
+              "RelativeDocumentMoniker": "BattleNet\\US_AllGames.xaml.cs",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\US_AllGames.xaml.cs",
+              "RelativeToolTip": "BattleNet\\US_AllGames.xaml.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAhwBsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T14:18:26.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AllGamesViewModel.cs",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\AllGamesViewModel.cs",
+              "RelativeDocumentMoniker": "BattleNet\\AllGamesViewModel.cs",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\AllGamesViewModel.cs",
+              "RelativeToolTip": "BattleNet\\AllGamesViewModel.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwCoAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T14:19:19.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "US_AllGames.xaml",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\US_AllGames.xaml",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\US_AllGames.xaml",
               "RelativeDocumentMoniker": "BattleNet\\US_AllGames.xaml",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\US_AllGames.xaml",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\US_AllGames.xaml",
               "RelativeToolTip": "BattleNet\\US_AllGames.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-30T14:06:52.964Z",
@@ -58,48 +115,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\MainWindowViewModel.cs",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "BattleNet\\ViewModel\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\MainWindowViewModel.cs",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\MainWindowViewModel.cs",
               "RelativeToolTip": "BattleNet\\ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAArAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T13:30:14.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ShopPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\View\\ShopPanel.xaml",
-              "RelativeDocumentMoniker": "BattleNet\\View\\ShopPanel.xaml",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\View\\ShopPanel.xaml",
-              "RelativeToolTip": "BattleNet\\View\\ShopPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T13:28:51.264Z",
+              "DocumentIndex": 7,
+              "Title": "GameContentViewModel.cs",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\GameContentViewModel.cs",
+              "RelativeDocumentMoniker": "BattleNet\\ViewModel\\GameContentViewModel.cs",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\GameContentViewModel.cs",
+              "RelativeToolTip": "BattleNet\\ViewModel\\GameContentViewModel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwC8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:26:39.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameContentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\GameContentViewModel.cs",
-              "RelativeDocumentMoniker": "BattleNet\\ViewModel\\GameContentViewModel.cs",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\GameContentViewModel.cs",
-              "RelativeToolTip": "BattleNet\\ViewModel\\GameContentViewModel.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAIwDUAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:26:39.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "GameContent.xaml",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\Utils\\GameContent.xaml",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\Utils\\GameContent.xaml",
               "RelativeDocumentMoniker": "BattleNet\\Utils\\GameContent.xaml",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\Utils\\GameContent.xaml",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\Utils\\GameContent.xaml",
               "RelativeToolTip": "BattleNet\\Utils\\GameContent.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-30T13:23:20.4Z",
@@ -107,11 +153,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\MainWindow.xaml",
               "RelativeDocumentMoniker": "BattleNet\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\MainWindow.xaml",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\MainWindow.xaml",
               "RelativeToolTip": "BattleNet\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-30T13:08:34.028Z",
@@ -119,23 +165,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PanelManagerViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\PanelManagerViewModel.cs",
-              "RelativeDocumentMoniker": "BattleNet\\ViewModel\\PanelManagerViewModel.cs",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\ViewModel\\PanelManagerViewModel.cs",
-              "RelativeToolTip": "BattleNet\\ViewModel\\PanelManagerViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:20:50.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "PanelManager.xaml",
-              "DocumentMoniker": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\View\\PanelManager.xaml",
+              "DocumentMoniker": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\View\\PanelManager.xaml",
               "RelativeDocumentMoniker": "BattleNet\\View\\PanelManager.xaml",
-              "ToolTip": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\View\\PanelManager.xaml",
+              "ToolTip": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\View\\PanelManager.xaml",
               "RelativeToolTip": "BattleNet\\View\\PanelManager.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-30T13:20:37.505Z",
