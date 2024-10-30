@@ -10,46 +10,81 @@ namespace BattleNet
     public class AllGamesViewModel : ViewBase
     {
         // Games
-        private ObservableCollection<Game> games =  new ObservableCollection<Game>();
-
+        private ObservableCollection<Game> games = new ObservableCollection<Game>();
         public ObservableCollection<Game> Games => games;
-        private static void ExecuteAllGamesCommand()
-        {
-            MessageBox.Show("All Games");
-        }
 
-        //// My Games properties
-        //private bool isMyGamesChecked;
-        //private bool isInstalledChecked;
-        //private bool isFavoriteChecked;
-
-        //// All Games properties
-        //private bool isAllGamesChecked;
-        //private bool isBlizzardChecked;
-        //private bool isActivisionChecked;
-
-
-
-        private void UncheckOthers(string checkedButton)
-        {
-            //// My Games unchecking logic
-            //if (checkedButton != nameof(IsMyGamesChecked)) IsMyGamesChecked = false;
-            //if (checkedButton != nameof(IsInstalledChecked)) IsInstalledChecked = false;
-            //if (checkedButton != nameof(IsFavoriteChecked)) IsFavoriteChecked = false;
-
-            //// All Games unchecking logic
-            //if (checkedButton != nameof(IsAllGamesChecked)) IsAllGamesChecked = false;
-            //if (checkedButton != nameof(IsBlizzardChecked)) IsBlizzardChecked = false;
-            //if (checkedButton != nameof(IsActivisionChecked)) IsActivisionChecked = false;
-        }
+        // Button states
+        public bool IsAllGamesChecked { get; set; }
+        public bool IsBlizzardChecked { get; set; }
+        public bool IsActivisionChecked { get; set; }
+        public bool IsMyGamesChecked { get; set; }
+        public bool IsInstalledChecked { get; set; }
+        public bool IsFavoriteChecked { get; set; }
 
         // Commands
-        public RelayCommand AllGamesCommand = new RelayCommand(execute => ExecuteAllGamesCommand());
-
+        public RelayCommand AllGamesCommand { get; }
+        public RelayCommand BlizzardCommand { get; }
+        public RelayCommand ActivisionCommand { get; }
+        public RelayCommand MyGamesCommand { get; }
+        public RelayCommand InstalledCommand { get; }
+        public RelayCommand FavoriteCommand { get; }
 
         public AllGamesViewModel()
         {
+            AllGamesCommand = new RelayCommand(_ => ExecuteAllGamesCommand());
+            BlizzardCommand = new RelayCommand(_ => ExecuteBlizzardCommand());
+            ActivisionCommand = new RelayCommand(_ => ExecuteActivisionCommand());
+            MyGamesCommand = new RelayCommand(_ => ExecuteMyGamesCommand());
+            InstalledCommand = new RelayCommand(_ => ExecuteInstalledCommand());
+            FavoriteCommand = new RelayCommand(_ => ExecuteFavoriteCommand());
+
             games = GameManager.games;
+        }
+
+        private void ExecuteAllGamesCommand()
+        {
+            UncheckOthers(nameof(IsAllGamesChecked));
+            IsAllGamesChecked = true;
+        }
+
+        private void ExecuteBlizzardCommand()
+        {
+            UncheckOthers(nameof(IsBlizzardChecked));
+            IsBlizzardChecked = true;
+        }
+
+        private void ExecuteActivisionCommand()
+        {
+            UncheckOthers(nameof(IsActivisionChecked));
+            IsActivisionChecked = true;
+        }
+
+        private void ExecuteMyGamesCommand()
+        {
+            UncheckOthers(nameof(IsMyGamesChecked));
+            IsMyGamesChecked = true;
+        }
+
+        private void ExecuteInstalledCommand()
+        {
+            UncheckOthers(nameof(IsInstalledChecked));
+            IsInstalledChecked = true;
+        }
+
+        private void ExecuteFavoriteCommand()
+        {
+            UncheckOthers(nameof(IsFavoriteChecked));
+            IsFavoriteChecked = true;
+        }
+
+        private void UncheckOthers(string checkedButton)
+        {
+            IsAllGamesChecked = checkedButton == nameof(IsAllGamesChecked);
+            IsBlizzardChecked = checkedButton == nameof(IsBlizzardChecked);
+            IsActivisionChecked = checkedButton == nameof(IsActivisionChecked);
+            IsMyGamesChecked = checkedButton == nameof(IsMyGamesChecked);
+            IsInstalledChecked = checkedButton == nameof(IsInstalledChecked);
+            IsFavoriteChecked = checkedButton == nameof(IsFavoriteChecked);
         }
     }
 }

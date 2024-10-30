@@ -38,14 +38,15 @@
     </UserControl.Resources>
 
     <StackPanel Orientation="Horizontal">
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10">
 
 
-        
+
             <!-- All Games Section -->
             <StackPanel Orientation="Horizontal" Margin="0,10,0,5">
-                <ToggleButton Style="{StaticResource HoverToggleButtonStyle}" 
-                  Command="{Binding AllGamesCommand}">
+                <ToggleButton Style="{StaticResource HoverToggleButtonStyle}"
+                  Command="{Binding AllGamesCommand}"
+                  IsChecked="{Binding IsAllGamesChecked}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="All games" FontSize="16"/>
                         <TextBlock Text=" (10)" FontSize="16" Margin="5,0,0,0"/>
@@ -54,8 +55,9 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
-                <ToggleButton Style="{StaticResource HoverToggleButtonStyle}" 
-                  Command="{Binding BlizzardCommand}">
+                <ToggleButton Style="{StaticResource HoverToggleButtonStyle}"
+                  Command="{Binding BlizzardCommand}"
+                  IsChecked="{Binding IsBlizzardChecked}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Blizzard" FontSize="16"/>
                         <TextBlock Text=" (7)" FontSize="16" Margin="5,0,0,0"/>
@@ -64,8 +66,9 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                <ToggleButton Style="{StaticResource HoverToggleButtonStyle}" 
-                  Command="{Binding ActivisionCommand}">
+                <ToggleButton Style="{StaticResource HoverToggleButtonStyle}"
+                  Command="{Binding ActivisionCommand}"
+                  IsChecked="{Binding IsActivisionChecked}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Activision" FontSize="16"/>
                         <TextBlock Text=" (3)" FontSize="16" Margin="5,0,0,0"/>
@@ -82,7 +85,8 @@
             <!-- My Games Section -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                 <ToggleButton Style="{StaticResource HoverToggleButtonStyle}" 
-                          Command="{Binding MyGamesCommand}">
+                  Command="{Binding MyGamesCommand}"
+                  IsChecked="{Binding IsMyGamesChecked}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="My Games" FontSize="16"/>
                         <TextBlock Text=" (5)" FontSize="16" Margin="5,0,0,0"/>
@@ -92,7 +96,8 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
                 <ToggleButton Style="{StaticResource HoverToggleButtonStyle}" 
-                          Command="{Binding InstalledCommand}">
+                  Command="{Binding InstalledCommand}"
+                  IsChecked="{Binding IsInstalledChecked}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Installed" FontSize="16"/>
                         <TextBlock Text=" (3)" FontSize="16" Margin="5,0,0,0"/>
@@ -102,7 +107,8 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                 <ToggleButton Style="{StaticResource HoverToggleButtonStyle}" 
-                          Command="{Binding FavoriteCommand}">
+                  Command="{Binding FavoriteCommand}"
+                  IsChecked="{Binding IsFavoriteChecked}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Favorite" FontSize="16"/>
                         <TextBlock Text=" (2)" FontSize="16" Margin="5,0,0,0"/>
@@ -113,7 +119,7 @@
 
         <TextBlock Text="BVN"></TextBlock>
 
-        <ListBox x:Name="GameList" Height="300" Width="500"
+        <ListBox x:Name="GameList" Height="Auto" Width="Auto"
                  HorizontalAlignment="Left" VerticalAlignment="Center"
                  ItemsSource="{Binding Games}" Visibility="Visible">
             <ListBox.ItemTemplate>
