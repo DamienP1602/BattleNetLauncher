@@ -46,7 +46,8 @@
                 <StackPanel Grid.Row="1" Margin="10,25,10,15" VerticalAlignment="Top">
                     <Border BorderThickness="0" Background="#2f2f37">
                         <StackPanel>
-                            <Button Width="200" Height="50" Background="#2f2f37" BorderThickness="0" HorizontalAlignment="Left" Margin="0,5,0,0">
+                            <Button Width="200" Height="50" Background="#2f2f37" BorderThickness="0" HorizontalAlignment="Left" Margin="0,5,0,0"
+                                    Command="{Binding AllGamesCommand}" CommandParameter="{x:Reference Name=PanelManager}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                     <Image Width="24" Height="24" Margin="0,0,15,0" Source="/grid_icon.png"/>
                                     <TextBlock Text="All Games" FontSize="16" Foreground="#fbfbfb"/>

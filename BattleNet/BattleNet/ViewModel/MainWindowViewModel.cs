@@ -12,6 +12,7 @@ namespace BattleNet.ViewModel
         public RelayCommand SwitchCommand => new RelayCommand(Switch);
         public RelayCommand HomeCommand => new RelayCommand(HomeDraw);
         public RelayCommand GameCommand => new RelayCommand(GameDraw);
+        public RelayCommand AllGamesCommand => new RelayCommand(AllGamesDraw);
         public RelayCommand ToggleVisibilityCommand => new RelayCommand(ToggleVisibility);
 
         ObservableCollection<Game> displayedGames = new ObservableCollection<Game>();
@@ -81,6 +82,18 @@ namespace BattleNet.ViewModel
         void GameDraw(object _obj)
         {
 
+        }
+
+        void AllGamesDraw(object _obj)
+        {
+            PanelManager? _panel = _obj as PanelManager;
+
+            if (_panel == null)
+                return;
+
+            _panel.GameContent.Visibility = Visibility.Hidden;
+            _panel.ShopPanel.Visibility = Visibility.Hidden;
+            _panel.AllGames.Visibility = Visibility.Visible;
         }
 
 
