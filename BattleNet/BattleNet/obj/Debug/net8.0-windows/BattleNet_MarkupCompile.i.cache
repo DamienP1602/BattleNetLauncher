@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\
+D:\Julio\Github\WPF\BattleNetLauncher\BattleNet\BattleNet\obj\Debug\net8.0-windows\
 BattleNet
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\PUEC1602\Documents\GitHub\BattleNetLauncher\BattleNet\BattleNet\App.xaml
-10964985746
+D:\Julio\Github\WPF\BattleNetLauncher\BattleNet\BattleNet\App.xaml
+91533171962
 
-322135371796
+30-1720610242
 1981385397204
-AddContactWindow.xaml;MainWindow.xaml;US_AllGames.xaml;Utils\Favorite.xaml;Utils\GameContent.xaml;Utils\US_ContactList.xaml;View\ConnexionWindow.xaml;View\CustomTitleBar.xaml;View\PanelManager.xaml;View\ShopPanel.xaml;
+AddContactWindow.xaml;MainWindow.xaml;US_AllGames.xaml;Utils\Favorite.xaml;Utils\GameContent.xaml;Utils\US_ContactList.xaml;View\CustomTitleBar.xaml;View\PanelManager.xaml;View\ShopPanel.xaml;
 
-True
+False
 

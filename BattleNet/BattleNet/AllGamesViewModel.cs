@@ -2,149 +2,54 @@
 using BattleNet.Utils;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace BattleNet
 {
-    public class AllGamesViewModel : INotifyPropertyChanged
+    public class AllGamesViewModel : ViewBase
     {
         // Games
-        ObservableCollection<Game> games = new ObservableCollection<Game>();
+        private ObservableCollection<Game> games =  new ObservableCollection<Game>();
 
-        // My Games properties
-        private bool isMyGamesChecked;
-        private bool isInstalledChecked;
-        private bool isFavoriteChecked;
-
-        // All Games properties
-        private bool isAllGamesChecked;
-        private bool isBlizzardChecked;
-        private bool isActivisionChecked;
-
-        // My Games properties
-        public bool IsMyGamesChecked
+        public ObservableCollection<Game> Games => games;
+        private static void ExecuteAllGamesCommand()
         {
-            get => isMyGamesChecked;
-            set
-            {
-                if (isMyGamesChecked != value)
-                {
-                    isMyGamesChecked = value;
-                    OnPropertyChanged(nameof(IsMyGamesChecked));
-                    if (value) UncheckOthers(nameof(IsMyGamesChecked));
-                }
-            }
+            MessageBox.Show("All Games");
         }
 
-        public bool IsInstalledChecked
-        {
-            get => isInstalledChecked;
-            set
-            {
-                if (isInstalledChecked != value)
-                {
-                    isInstalledChecked = value;
-                    OnPropertyChanged(nameof(IsInstalledChecked));
-                    if (value) UncheckOthers(nameof(IsInstalledChecked));
-                }
-            }
-        }
+        //// My Games properties
+        //private bool isMyGamesChecked;
+        //private bool isInstalledChecked;
+        //private bool isFavoriteChecked;
 
-        public bool IsFavoriteChecked
-        {
-            get => isFavoriteChecked;
-            set
-            {
-                if (isFavoriteChecked != value)
-                {
-                    isFavoriteChecked = value;
-                    OnPropertyChanged(nameof(IsFavoriteChecked));
-                    if (value) UncheckOthers(nameof(IsFavoriteChecked));
-                }
-            }
-        }
+        //// All Games properties
+        //private bool isAllGamesChecked;
+        //private bool isBlizzardChecked;
+        //private bool isActivisionChecked;
 
-        // All Games properties
-        public bool IsAllGamesChecked
-        {
-            get => isAllGamesChecked;
-            set
-            {
-                if (isAllGamesChecked != value)
-                {
-                    isAllGamesChecked = value;
-                    OnPropertyChanged(nameof(IsAllGamesChecked));
-                    if (value) UncheckOthers(nameof(IsAllGamesChecked));
-                }
-            }
-        }
 
-        public bool IsBlizzardChecked
-        {
-            get => isBlizzardChecked;
-            set
-            {
-                if (isBlizzardChecked != value)
-                {
-                    isBlizzardChecked = value;
-                    OnPropertyChanged(nameof(IsBlizzardChecked));
-                    if (value) UncheckOthers(nameof(IsBlizzardChecked));
-                }
-            }
-        }
-
-        public bool IsActivisionChecked
-        {
-            get => isActivisionChecked;
-            set
-            {
-                if (isActivisionChecked != value)
-                {
-                    isActivisionChecked = value;
-                    OnPropertyChanged(nameof(IsActivisionChecked));
-                    if (value) UncheckOthers(nameof(IsActivisionChecked));
-                }
-            }
-        }
 
         private void UncheckOthers(string checkedButton)
         {
-            // My Games unchecking logic
-            if (checkedButton != nameof(IsMyGamesChecked)) IsMyGamesChecked = false;
-            if (checkedButton != nameof(IsInstalledChecked)) IsInstalledChecked = false;
-            if (checkedButton != nameof(IsFavoriteChecked)) IsFavoriteChecked = false;
+            //// My Games unchecking logic
+            //if (checkedButton != nameof(IsMyGamesChecked)) IsMyGamesChecked = false;
+            //if (checkedButton != nameof(IsInstalledChecked)) IsInstalledChecked = false;
+            //if (checkedButton != nameof(IsFavoriteChecked)) IsFavoriteChecked = false;
 
-            // All Games unchecking logic
-            if (checkedButton != nameof(IsAllGamesChecked)) IsAllGamesChecked = false;
-            if (checkedButton != nameof(IsBlizzardChecked)) IsBlizzardChecked = false;
-            if (checkedButton != nameof(IsActivisionChecked)) IsActivisionChecked = false;
+            //// All Games unchecking logic
+            //if (checkedButton != nameof(IsAllGamesChecked)) IsAllGamesChecked = false;
+            //if (checkedButton != nameof(IsBlizzardChecked)) IsBlizzardChecked = false;
+            //if (checkedButton != nameof(IsActivisionChecked)) IsActivisionChecked = false;
         }
 
         // Commands
-        public ICommand MyGamesCommand { get; }
-        public ICommand InstalledCommand { get; }
-        public ICommand FavoriteCommand { get; }
-        public ICommand AllGamesCommand { get; }
-        public ICommand BlizzardCommand { get; }
-        public ICommand ActivisionCommand { get; }
+        public RelayCommand AllGamesCommand = new RelayCommand(execute => ExecuteAllGamesCommand());
+
 
         public AllGamesViewModel()
         {
-            MyGamesCommand = new RelayCommand(param => IsMyGamesChecked = true);
-            InstalledCommand = new RelayCommand(param => IsInstalledChecked = true);
-            FavoriteCommand = new RelayCommand(param => IsFavoriteChecked = true);
-            AllGamesCommand = new RelayCommand(param => IsAllGamesChecked = true);
-            BlizzardCommand = new RelayCommand(param => IsBlizzardChecked = true);
-            ActivisionCommand = new RelayCommand(param => IsActivisionChecked = true);
-
             games = GameManager.games;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
