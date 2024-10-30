@@ -1,0 +1,86 @@
+﻿using BattleNet.Utils;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Input;
+
+namespace BattleNet
+{
+    public class AllGamesViewModel : INotifyPropertyChanged
+    {
+        private bool _isAllGamesChecked;
+        private bool _isBlizzardChecked;
+        private bool _isActivisionChecked;
+
+        public bool IsAllGamesChecked
+        {
+            get => _isAllGamesChecked;
+            set
+            {
+                if (_isAllGamesChecked != value)
+                {
+                    _isAllGamesChecked = value;
+                    OnPropertyChanged(nameof(IsAllGamesChecked));
+                    if (value) UncheckOthers(nameof(IsAllGamesChecked));
+                }
+            }
+        }
+
+        public bool IsBlizzardChecked
+        {
+            get => _isBlizzardChecked;
+            set
+            {
+                if (_isBlizzardChecked != value)
+                {
+                    _isBlizzardChecked = value;
+                    OnPropertyChanged(nameof(IsBlizzardChecked));
+                    if (value) UncheckOthers(nameof(IsBlizzardChecked));
+                }
+            }
+        }
+
+        public bool IsActivisionChecked
+        {
+            get => _isActivisionChecked;
+            set
+            {
+                if (_isActivisionChecked != value)
+                {
+                    _isActivisionChecked = value;
+                    OnPropertyChanged(nameof(IsActivisionChecked));
+                    if (value) UncheckOthers(nameof(IsActivisionChecked));
+                }
+            }
+        }
+
+        private void UncheckOthers(string checkedButton)
+        {
+            if (checkedButton != nameof(IsAllGamesChecked)) IsAllGamesChecked = false;
+            if (checkedButton != nameof(IsBlizzardChecked)) IsBlizzardChecked = false;
+            if (checkedButton != nameof(IsActivisionChecked)) IsActivisionChecked = false;
+        }
+
+        public ICommand AllGamesCommand { get; }
+        public ICommand BlizzardCommand { get; }
+        public ICommand ActivisionCommand { get; }
+
+        public AllGamesViewModel()
+        {
+            AllGamesCommand = new RelayCommand(param => IsAllGamesChecked = true);
+            BlizzardCommand = new RelayCommand(param => IsBlizzardChecked = true);
+            ActivisionCommand = new RelayCommand(param => IsActivisionChecked = true);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}

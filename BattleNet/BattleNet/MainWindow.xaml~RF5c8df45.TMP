@@ -1,0 +1,153 @@
+﻿<Window x:Class="BattleNet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BattleNet"
+        xmlns:custom="clr-namespace:BattleNet.Utils"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1080">
+
+    <Grid>
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Column="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="0,1">
+                    <GradientStop Color="#15171E" Offset="0"/>
+                    <GradientStop Color="#15171E" Offset="0.3"/>
+                    <GradientStop Color="#FF03467B" Offset="0.5"/>
+                    <GradientStop Color="#15171E" Offset="0.7"/>
+                    <GradientStop Color="#15171E" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+
+            
+
+            <StackPanel Grid.Row="1" Margin="10,0,10,15" Orientation="Horizontal">
+
+                <StackPanel Grid.Row="1" Margin="10,0,10,15" VerticalAlignment="Top">
+
+                    <!-- Conteneur pour le bouton avec la bande bleue -->
+                    <Border BorderThickness="0" Background="#2f2f37">
+                        <StackPanel>
+                            <Button Width="200" Height="50" Background="#2f2f37" BorderThickness="0" HorizontalAlignment="Left" Margin="0,5,0,0">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/grid_icon.png" Width="24" Height="24" Margin="0,0,15,0"/>
+                                    <!-- Remplacez par le chemin de votre icône -->
+                                    <TextBlock Text="All Games" FontSize="16" Foreground="#fbfbfb"/>
+                                </StackPanel>
+                            </Button>
+                            <!-- Bande bleue -->
+                            <Rectangle Height="4" Fill="#FF03467B" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+
+               
+                
+            <custom:Favorite x:Name="FavoritesGame" Grid.Row="1" Grid.Column="0" Margin="10,0,10,15"></custom:Favorite>
+            </StackPanel>
+
+            
+
+            <Grid Grid.Row="0">
+
+                <Button Height="50" Width="50" HorizontalAlignment="Left" Margin="0,0,0,0" Background="Transparent" Command="{Binding ToggleVisibilityCommand}" CommandParameter="{x:Reference Name=OptionMenu}" BorderThickness="0">
+                    <Image VerticalAlignment="Top" HorizontalAlignment="Left" Source="/BTIcon.png"></Image>
+                </Button>
+
+                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="75,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Home}" BorderThickness="0">
+                    <TextBlock Text="Home" Height="35" Width="100" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Home"></TextBlock>
+                </Button>
+                <Button Height="35" Width="80" HorizontalAlignment="Left" Margin="155,0,0,0" Background="Transparent" Command="{Binding SwitchCommand }" CommandParameter="{x:Reference Name=Games}" BorderThickness="0">
+                    <TextBlock Text="Games" Height="35" Width="80" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Games"></TextBlock>
+                </Button>
+                <Button Height="35" Width="70" HorizontalAlignment="Left" Margin="245,0,0,0" Background="Transparent" Command="{Binding SwitchCommand}" CommandParameter="{x:Reference Name=Shop}" BorderThickness="0">
+                    <TextBlock Text="Shop" Height="35" Width="60" HorizontalAlignment="Left" FontSize="25" Foreground="White" x:Name="Shop"></TextBlock>
+                </Button>
+                
+            </Grid>
+
+            
+
+            <Grid x:Name="HomeContent" Grid.Row="2">
+                <custom:GameContent x:Name="GameContent" HorizontalAlignment="Center"></custom:GameContent>
+            </Grid>
+
+            <Grid x:Name="GamesContent" Grid.Row="2" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <Button Content="Show All Games" Margin="5" Click="DisplayAll" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
+                        <Button Content="Show Favorite Games" Margin="5" Click="DisplayFav" Background="Transparent" BorderBrush="Black" BorderThickness="2" Foreground="White"/>
+                    </StackPanel>
+
+                </StackPanel>
+                <ListBox x:Name="GamesListBox" ItemsSource="{Binding DisplayedGames,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="510" Width="700" Margin="160,0,0,0" Background="Transparent">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center">
+                                <Border BorderBrush="#101216" BorderThickness="5" Margin="5" Padding="5" Background="#101216">
+                                    <Image Width="100" Height="100" Source="{Binding IconPath}" />
+                                </Border>
+                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Margin="5" Foreground="White" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+
+            <Grid x:Name="ShopContent" Grid.Row="2">
+                
+            </Grid>
+            
+            
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#15171E">
+            <custom:US_ContactList Grid.Column="1" VerticalAlignment="Top"></custom:US_ContactList>
+        </Grid>
+
+        
+
+        <Menu x:Name="OptionMenu" HorizontalAlignment="Left" VerticalAlignment="Top" Height="390" Width="200" Margin="0,65,0,0" Visibility="Hidden">
+            <MenuItem Header="Settings" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="BattleNet Update" FontSize="16" Width="200" Padding="10,5"/>
+            <Separator Background="Gray" Height="5" Width="200"/>
+            <MenuItem Header="Account" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="Support" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="Forum" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="Mobile App" FontSize="16" Width="200" Padding="10,5"/>
+            <Separator Background="Gray" Height="5" Width="200"/>
+            <MenuItem Header="Send Feedback" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="Report a Bug" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="Take a Tour" FontSize="16" Width="200" Padding="10,5"/>
+            <Separator Background="Gray" Height="5" Width="200"/>
+            <MenuItem Header="Log Out" FontSize="16" Width="200" Padding="10,5"/>
+            <MenuItem Header="Exit" FontSize="16" Width="200" Padding="10,5"/>
+        </Menu>
+        
+
+            
+    </Grid>
+</Window>

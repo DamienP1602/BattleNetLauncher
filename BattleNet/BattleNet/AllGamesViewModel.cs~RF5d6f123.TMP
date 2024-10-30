@@ -1,0 +1,106 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BattleNet
+{
+    public partial class AllGamesViewModel : INotifyPropertyChanged
+    {
+        private bool isAllGamesSelected;
+        private bool _isBlizzardSelected;
+        private bool _isActivisionSelected;
+
+        public bool IsAllGamesSelected
+        {
+            get => isAllGamesSelected;
+            set
+            {
+                if (isAllGamesSelected != value)
+                {
+                    isAllGamesSelected = value;
+                    OnPropertyChanged(nameof(IsAllGamesSelected));
+                    UpdateButtonStates();
+                }
+            }
+        }
+
+        public bool IsBlizzardSelected
+        {
+            get => _isBlizzardSelected;
+            set
+            {
+                if (_isBlizzardSelected != value)
+                {
+                    _isBlizzardSelected = value;
+                    OnPropertyChanged(nameof(IsBlizzardSelected));
+                    UpdateButtonStates();
+                }
+            }
+        }
+
+        public bool IsActivisionSelected
+        {
+            get => _isActivisionSelected;
+            set
+            {
+                if (_isActivisionSelected != value)
+                {
+                    _isActivisionSelected = value;
+                    OnPropertyChanged(nameof(IsActivisionSelected));
+                    UpdateButtonStates();
+                }
+            }
+        }
+
+        private void UpdateButtonStates()
+        {
+            IsAllGamesEnabled = !IsBlizzardSelected && !IsActivisionSelected;
+            IsBlizzardEnabled = !IsAllGamesSelected && !IsActivisionSelected;
+            IsActivisionEnabled = !IsAllGamesSelected && !IsBlizzardSelected;
+        }
+
+        private bool _isAllGamesEnabled = true;
+        public bool IsAllGamesEnabled
+        {
+            get => _isAllGamesEnabled;
+            set
+            {
+                _isAllGamesEnabled = value;
+                OnPropertyChanged(nameof(IsAllGamesEnabled));
+            }
+        }
+
+        private bool _isBlizzardEnabled = true;
+        public bool IsBlizzardEnabled
+        {
+            get => _isBlizzardEnabled;
+            set
+            {
+                _isBlizzardEnabled = value;
+                OnPropertyChanged(nameof(IsBlizzardEnabled));
+            }
+        }
+
+        private bool _isActivisionEnabled = true;
+        public bool IsActivisionEnabled
+        {
+            get => _isActivisionEnabled;
+            set
+            {
+                _isActivisionEnabled = value;
+                OnPropertyChanged(nameof(IsActivisionEnabled));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}
+
+}
