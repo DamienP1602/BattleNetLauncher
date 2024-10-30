@@ -1,6 +1,4 @@
-﻿using BattleNet.Model;
-using BattleNet.Utils;
-using System.Collections.ObjectModel;
+﻿using BattleNet.Utils;
 using System.ComponentModel;
 using System.Windows.Input;
 
@@ -8,28 +6,25 @@ namespace BattleNet
 {
     public class AllGamesViewModel : INotifyPropertyChanged
     {
-        // Games
-        ObservableCollection<Game> games = new ObservableCollection<Game>();
-
         // My Games properties
-        private bool isMyGamesChecked;
-        private bool isInstalledChecked;
-        private bool isFavoriteChecked;
+        private bool _isMyGamesChecked;
+        private bool _isInstalledChecked;
+        private bool _isFavoriteChecked;
 
         // All Games properties
-        private bool isAllGamesChecked;
-        private bool isBlizzardChecked;
-        private bool isActivisionChecked;
+        private bool _isAllGamesChecked;
+        private bool _isBlizzardChecked;
+        private bool _isActivisionChecked;
 
         // My Games properties
         public bool IsMyGamesChecked
         {
-            get => isMyGamesChecked;
+            get => _isMyGamesChecked;
             set
             {
-                if (isMyGamesChecked != value)
+                if (_isMyGamesChecked != value)
                 {
-                    isMyGamesChecked = value;
+                    _isMyGamesChecked = value;
                     OnPropertyChanged(nameof(IsMyGamesChecked));
                     if (value) UncheckOthers(nameof(IsMyGamesChecked));
                 }
@@ -38,12 +33,12 @@ namespace BattleNet
 
         public bool IsInstalledChecked
         {
-            get => isInstalledChecked;
+            get => _isInstalledChecked;
             set
             {
-                if (isInstalledChecked != value)
+                if (_isInstalledChecked != value)
                 {
-                    isInstalledChecked = value;
+                    _isInstalledChecked = value;
                     OnPropertyChanged(nameof(IsInstalledChecked));
                     if (value) UncheckOthers(nameof(IsInstalledChecked));
                 }
@@ -52,12 +47,12 @@ namespace BattleNet
 
         public bool IsFavoriteChecked
         {
-            get => isFavoriteChecked;
+            get => _isFavoriteChecked;
             set
             {
-                if (isFavoriteChecked != value)
+                if (_isFavoriteChecked != value)
                 {
-                    isFavoriteChecked = value;
+                    _isFavoriteChecked = value;
                     OnPropertyChanged(nameof(IsFavoriteChecked));
                     if (value) UncheckOthers(nameof(IsFavoriteChecked));
                 }
@@ -67,12 +62,12 @@ namespace BattleNet
         // All Games properties
         public bool IsAllGamesChecked
         {
-            get => isAllGamesChecked;
+            get => _isAllGamesChecked;
             set
             {
-                if (isAllGamesChecked != value)
+                if (_isAllGamesChecked != value)
                 {
-                    isAllGamesChecked = value;
+                    _isAllGamesChecked = value;
                     OnPropertyChanged(nameof(IsAllGamesChecked));
                     if (value) UncheckOthers(nameof(IsAllGamesChecked));
                 }
@@ -81,12 +76,12 @@ namespace BattleNet
 
         public bool IsBlizzardChecked
         {
-            get => isBlizzardChecked;
+            get => _isBlizzardChecked;
             set
             {
-                if (isBlizzardChecked != value)
+                if (_isBlizzardChecked != value)
                 {
-                    isBlizzardChecked = value;
+                    _isBlizzardChecked = value;
                     OnPropertyChanged(nameof(IsBlizzardChecked));
                     if (value) UncheckOthers(nameof(IsBlizzardChecked));
                 }
@@ -95,12 +90,12 @@ namespace BattleNet
 
         public bool IsActivisionChecked
         {
-            get => isActivisionChecked;
+            get => _isActivisionChecked;
             set
             {
-                if (isActivisionChecked != value)
+                if (_isActivisionChecked != value)
                 {
-                    isActivisionChecked = value;
+                    _isActivisionChecked = value;
                     OnPropertyChanged(nameof(IsActivisionChecked));
                     if (value) UncheckOthers(nameof(IsActivisionChecked));
                 }
@@ -136,8 +131,6 @@ namespace BattleNet
             AllGamesCommand = new RelayCommand(param => IsAllGamesChecked = true);
             BlizzardCommand = new RelayCommand(param => IsBlizzardChecked = true);
             ActivisionCommand = new RelayCommand(param => IsActivisionChecked = true);
-
-            games = GameManager.games;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj": {}
+    "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj": {
+    "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj",
+        "projectUniqueName": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj",
         "projectName": "BattleNet",
-        "projectPath": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj",
-        "packagesPath": "C:\\Users\\PUEC1602\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PUEC1602\\Documents\\GitHub\\BattleNetLauncher\\BattleNet\\BattleNet\\obj\\",
+        "projectPath": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\BattleNet.csproj",
+        "packagesPath": "C:\\Users\\MOUL3107\\.nuget\\packages\\",
+        "outputPath": "D:\\Julio\\Github\\WPF\\BattleNetLauncher\\BattleNet\\BattleNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PUEC1602\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MOUL3107\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

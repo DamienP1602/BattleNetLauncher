@@ -136,8 +136,6 @@ namespace BattleNet
             AllGamesCommand = new RelayCommand(param => IsAllGamesChecked = true);
             BlizzardCommand = new RelayCommand(param => IsBlizzardChecked = true);
             ActivisionCommand = new RelayCommand(param => IsActivisionChecked = true);
-
-            games = GameManager.games;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
