@@ -119,7 +119,7 @@
 
         <!--<TextBlock Text="Binding { }"></TextBlock>-->
         
-        <ListBox x:Name="GameList" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="">
+        <ListBox x:Name="GameList" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
