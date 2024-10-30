@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <None Remove="BTIcon.png" />
-    <None Remove="grid_icon.png" />
+    <None Remove="LogoLauncher.png" />
     <None Remove="OverIcon.png" />
     <None Remove="Utils\addContact.png" />
     <None Remove="Utils\BO6BG.png" />
@@ -28,12 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="BTIcon.png" />
-    <Resource Include="grid_icon.png" />
+    <Resource Include="LogoLauncher.png" />
     <Resource Include="OverIcon.png" />
     <Resource Include="Utils\addContact.png" />
     <Resource Include="Utils\BO6BG.png" />

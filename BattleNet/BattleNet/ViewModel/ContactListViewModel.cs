@@ -1,5 +1,6 @@
 ﻿using BattleNet.Model;
 using BattleNet.Utils;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,8 +14,8 @@ namespace BattleNet.ViewModel
         public Contact CurrentUser { get; set; } = null;
         public Constant Constant { get; } = new Constant();
 
-        public List<Contact> allContacts = new List<Contact>();
-        public List<Contact> AllContacts
+        public ObservableCollection<Contact> allContacts = new ObservableCollection<Contact>();
+        public ObservableCollection<Contact> AllContacts
         {
             get { return allContacts; }
             set
@@ -26,7 +27,17 @@ namespace BattleNet.ViewModel
         }
         public List<Contact> favContacts = new List<Contact>();
 
-        public string AllFriendListText { get; set; } = "Amis - 0/0";
+
+        string allFriendListText = "Amis - 0/0";
+        public string AllFriendListText
+        {
+            get => allFriendListText;
+            set
+            {
+                allFriendListText = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ContactListViewModel()
         {
@@ -44,7 +55,6 @@ namespace BattleNet.ViewModel
                 if (_contact.State != EStateVisibility.OFFLINE) _totalConnected++;
 
             AllFriendListText = $"Amis - {_totalConnected}/{AllContacts.Count}";
-            OnPropertyChanged();
         }
 
         public void OnChangeVisibilityLB(object _sender)

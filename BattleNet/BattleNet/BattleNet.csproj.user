@@ -16,6 +16,9 @@
     <Compile Update="Utils\US_ContactList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\CustomTitleBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Utils\US_ContactList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CustomTitleBar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
