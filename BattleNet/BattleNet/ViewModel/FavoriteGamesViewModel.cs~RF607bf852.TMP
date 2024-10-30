@@ -1,0 +1,23 @@
+﻿using BattleNet.Model;
+using BattleNet.Utils;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BattleNet.ViewModel
+{
+    public class FavoriteGamesViewModel : ViewBase
+    {
+        public ObservableCollection<Game> Games { get; set; }
+
+        public RelayCommand AddGameToFavoritesCommand => new RelayCommand(AddGameToFavorites);
+
+        void AddGameToFavorites(object obj)
+        {
+            Games.Add((Game)obj);
+        }
+    }
+}

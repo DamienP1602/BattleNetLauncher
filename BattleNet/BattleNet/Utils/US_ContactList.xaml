@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="BattleNet.Utils.US_ContactList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BattleNet.Utils"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <local:StringBrushConverter x:Key="SBConverter"></local:StringBrushConverter>
+    </UserControl.Resources>
+    
+    <Viewbox>        
+        <Grid Background="{Binding Constant.BACKGROUND_COLOR, Converter={StaticResource SBConverter}}"> <!--Grille de stockage total -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition> <!--Row 1 Profil Info-->
+                <RowDefinition Height="*"></RowDefinition> <!--Row 2 AddContact/ParamContact/SearchContact-->
+                <RowDefinition Height="*"></RowDefinition> <!--Row 3 FavContactList-->
+                <RowDefinition Height="*"></RowDefinition> <!--Row 4 AllContactList-->
+                <RowDefinition Height="2*"></RowDefinition> <!--BOTTOM Row Chat&Group-->
+            </Grid.RowDefinitions>
+
+            <!-- <StackPanel Orientation="Vertical" >--> <!--Panel d'alignement générale d'élément verticalement-->
+                <!--Panel contenant ImageProfil (Pseudo Statut) Dissocier-->
+            <StackPanel Grid.Row="0" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Width="25" Height="25"></Image>
+                <Button Background="Transparent">                        
+                    <StackPanel Orientation="Vertical" Width="100">
+                        <TextBlock x:Name="test" Foreground="{Binding Constant.FOREGROUND_COLOR, Converter={StaticResource SBConverter}}" 
+                                    Text="{Binding CurrentUser.PseudoBattleTag}" FontSize="16"></TextBlock>
+                        <TextBlock x:Name="State" Text="{Binding CurrentUser.State}" Foreground="LightGray"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="unlinkButton" HorizontalAlignment="Right" Width="10" Height="10">
+                    <!-- <Image></Image> -->
+                </Button>                    
+            </StackPanel>
+
+            <!--Pannel contenant AddContact/ParamContact/SearchContact-->
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+                <Button Command="{Binding AddContactCommand}" Margin="5,5,5,5">
+                    <Image Width="10" Height="10" Source="/Utils/addContact.png" ></Image>
+                </Button>
+                <Button Margin="5,5,5,5">
+                    <Image  Width="10" Height="10" Source="/Utils/setContact.png"></Image>
+                </Button>
+                <StackPanel Orientation="Horizontal" Width="100" Margin="5,5,5,5">
+                    <TextBox Width="80"/>
+                    <Image  Width="10" Height="10" Source="/Utils/loop.png"></Image>
+                </StackPanel>
+            </StackPanel>
+
+            <!--Pannel contenant FavListContact-->
+            <StackPanel Grid.Row="2">
+                <Button>
+                    <StackPanel>
+                        <Image></Image> <!--Image d'une fleche orienter droite ou bas pour ouvert ou fermé-->
+                        <Image></Image> <!--Image étoile pour fav-->
+                        <TextBlock Text="Contacts préférés - 0/0"></TextBlock><!--TODO Rendre dynamique le 0/0-->
+                    </StackPanel>
+                </Button>
+                <ListBox x:Name="listFavoriteContact"  Visibility="Hidden"></ListBox>
+            </StackPanel>
+
+            <!--Pannel contenant ALlListContact-->
+            <StackPanel Grid.Row="3">
+                <Button CommandParameter="{x:Reference Name=listAllContact}" Command="{Binding ChangeVisibilityCommand}">
+                    <StackPanel>
+                        <Image></Image><!--Image d'une fleche orienter droite ou bas pour ouvert ou fermé-->
+                        <Image></Image><!--Image contact-->
+                        <TextBlock Text="{Binding AllFriendListText}"></TextBlock><!--TODO Rendre dynamique le 0/0-->
+                    </StackPanel>
+                </Button>
+                <ListBox x:Name="listAllContact" Visibility="Hidden" ItemsSource="{Binding AllContacts}"></ListBox>
+            </StackPanel>
+
+            <!--</StackPanel>-->
+        </Grid>
+    </Viewbox>
+</UserControl>

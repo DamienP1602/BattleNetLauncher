@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BTIcon.png" />
+    <None Remove="OverIcon.png" />
+    <None Remove="Utils\addContact.png" />
+    <None Remove="Utils\BO6BG.png" />
+    <None Remove="Utils\Bo6Icon.png" />
+    <None Remove="Utils\Diablo4Icon.png" />
+    <None Remove="Utils\DiabloBG.png" />
+    <None Remove="Utils\HTBG.png" />
+    <None Remove="Utils\HTIcon.png" />
+    <None Remove="Utils\loop.png" />
+    <None Remove="Utils\OverIcon.png" />
+    <None Remove="Utils\OWBG.png" />
+    <None Remove="Utils\setContact.png" />
+    <None Remove="Utils\WowIcon.png" />
+    <None Remove="WowIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BTIcon.png" />
+    <Resource Include="OverIcon.png" />
+    <Resource Include="Utils\addContact.png" />
+    <Resource Include="Utils\BO6BG.png" />
+    <Resource Include="Utils\Bo6Icon.png" />
+    <Resource Include="Utils\Diablo4Icon.png" />
+    <Resource Include="Utils\DiabloBG.png" />
+    <Resource Include="Utils\HTBG.png" />
+    <Resource Include="Utils\HTIcon.png" />
+    <Resource Include="Utils\loop.png" />
+    <Resource Include="Utils\OverIcon.png" />
+    <Resource Include="Utils\OWBG.png" />
+    <Resource Include="Utils\setContact.png" />
+    <Resource Include="Utils\WowIcon.png" />
+    <Resource Include="WowIcon.png" />
+  </ItemGroup>
+
+</Project>
