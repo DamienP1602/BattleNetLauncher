@@ -9,10 +9,10 @@ namespace BattleNet.ViewModel
 {
     public class MainWindowViewModel : Utils.ViewBase
     {
-        public RelayCommand SwitchCommand => new RelayCommand(Switch);
         public RelayCommand HomeCommand => new RelayCommand(HomeDraw);
         public RelayCommand GameCommand => new RelayCommand(GameDraw);
         public RelayCommand AllGamesCommand => new RelayCommand(AllGamesDraw);
+        public RelayCommand ShopCommand => new RelayCommand(ShopDraw);
         public RelayCommand ToggleVisibilityCommand => new RelayCommand(ToggleVisibility);
 
         ObservableCollection<Game> displayedGames = new ObservableCollection<Game>();
@@ -34,30 +34,6 @@ namespace BattleNet.ViewModel
         {
 
             
-        }
-
-        void Switch(object? _sender)
-        {
-            //TextBlock _textBlox = (TextBlock)_sender;
-            //string _name = _textBlox.Text;
-
-            //foreach (string key in allGrids.Keys)
-            //{
-            //    if (key == _name)
-            //    {
-            //        foreach (Grid grid in allGrids[key])
-            //        {
-            //            grid.Visibility = Visibility.Visible;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        foreach (Grid grid in allGrids[key])
-            //        {
-            //            grid.Visibility = Visibility.Hidden;
-            //        }
-            //    }
-            //}
         }
 
         void HomeDraw(object _obj)
@@ -87,6 +63,18 @@ namespace BattleNet.ViewModel
             _panel.GameContent.Visibility = Visibility.Hidden;
             _panel.ShopPanel.Visibility = Visibility.Hidden;
             _panel.AllGames.Visibility = Visibility.Visible;
+        }
+
+        void ShopDraw(object _obj)
+        {
+            PanelManager? _panel = _obj as PanelManager;
+
+            if (_panel == null)
+                return;
+
+            _panel.GameContent.Visibility = Visibility.Hidden;
+            _panel.ShopPanel.Visibility = Visibility.Visible;
+            _panel.AllGames.Visibility = Visibility.Hidden;
         }
 
 

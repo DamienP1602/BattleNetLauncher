@@ -1,5 +1,6 @@
 ﻿using BattleNet.Model;
 using BattleNet.Utils;
+using BattleNet.View;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,6 +11,7 @@ namespace BattleNet.ViewModel
     {
         public RelayCommand ChangeVisibilityCommand => new RelayCommand(OnChangeVisibilityLB);
         public RelayCommand AddContactCommand => new RelayCommand(execute => AddContact());
+        public RelayCommand ConnexionCommand => new RelayCommand(Connexion);
 
         public Contact CurrentUser { get; set; } = null;
         public Constant Constant { get; } = new Constant();
@@ -80,6 +82,12 @@ namespace BattleNet.ViewModel
         {
             AllContacts.Add(_contact);
             UpdateNumberFriend();
+        }
+
+        void Connexion(object _obj)
+        {
+            ConnexionWindow _newWindow = new ConnexionWindow();
+            _newWindow.Show();
         }
     }
 }

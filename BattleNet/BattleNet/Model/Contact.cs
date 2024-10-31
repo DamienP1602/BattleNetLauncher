@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace BattleNet.Model
 {
@@ -14,11 +15,21 @@ namespace BattleNet.Model
         OFFLINE,
     }
 
-    public class Contact
+    public class Contact : Utils.ViewBase
     {
         public string Pseudo {  get; set; }
-        public string BattleTag { get; set; } // doit suivre un pattern #12345
-        public string PseudoBattleTag { get; set; }
+        public string BattleTag { get; set; }
+
+        string pseudoBattleTag;
+        public string PseudoBattleTag
+        {
+            get => pseudoBattleTag;
+            set
+            {
+                pseudoBattleTag = value;
+                OnPropertyChanged();
+            }
+        }
         public EStateVisibility State { get; set; } 
         public string Region { get; set; } // Europe, Asie etc...
 

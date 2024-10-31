@@ -25,6 +25,8 @@
     <None Remove="Utils\OWBG.png" />
     <None Remove="Utils\setContact.png" />
     <None Remove="Utils\WowIcon.png" />
+    <None Remove="View\BTIcon.png" />
+    <None Remove="View\TextAndLogo.png" />
     <None Remove="WowIcon.png" />
   </ItemGroup>
 
@@ -45,6 +47,8 @@
     <Resource Include="Utils\OWBG.png" />
     <Resource Include="Utils\setContact.png" />
     <Resource Include="Utils\WowIcon.png" />
+    <Resource Include="View\BTIcon.png" />
+    <Resource Include="View\TextAndLogo.png" />
     <Resource Include="WowIcon.png" />
   </ItemGroup>
 

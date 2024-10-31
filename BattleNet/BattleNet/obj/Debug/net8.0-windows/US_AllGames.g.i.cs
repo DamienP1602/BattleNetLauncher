@@ -61,7 +61,7 @@ namespace BattleNet {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BattleNet;V1.0.0.0;component/us_allgames.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BattleNet;component/us_allgames.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\US_AllGames.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
